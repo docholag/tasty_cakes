@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Tasty Cakes</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.0/css/all.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+	<link rel="stylesheet"
+		href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/mdb.min.css">
+	<link rel="stylesheet"
+		href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-addons-4.19.1.min.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/mdb-plugins-gathered.min.css">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="img/cakes.png" />
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+		integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i|Noto+Sans:400,400i,700"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+	<!-- w3 -->
+	<link rel="stylesheet" href="css/w3.css">
+
+	<!-- slide product -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/assets/owl.carousel.min.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/assets/owl.theme.default.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/owl.carousel.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/owl.carousel.min.js"></script>
+</head>
+
+<body oncontextmenu="return false" class="snippet-body">
+	<!-- Back to top & chat -->
+	<button onclick="topFunction()" style="display: none;" id="myBtn" title="Go to top"><img src="images/top.png"
+			alt=""></button>
+	<!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+	<script>!function (s, u, b, i, z) { var o, t, r, y; s[i] || (s._sbzaccid = z, s[i] = function () { s[i].q.push(arguments) }, s[i].q = [], s[i]("setAccount", z), r = ["widget.subiz.net", "storage.googleapis" + (t = ".com"), "app.sbz.workers.dev", i + "a" + (o = function (k, t) { var n = t <= 6 ? 5 : o(k, t - 1) + o(k, t - 3); return k !== t ? n : n.toString(32) })(20, 20) + t, i + "b" + o(30, 30) + t, i + "c" + o(40, 40) + t], (y = function (k) { var t, n; s._subiz_init_2094850928430 || r[k] && (t = u.createElement(b), n = u.getElementsByTagName(b)[0], t.async = 1, t.src = "https://" + r[k] + "/sbz/app.js?accid=" + z, n.parentNode.insertBefore(t, n), setTimeout(y, 2e3, k + 1)) })(0)) }(window, document, "script", "subiz", "acqvxvpqycbepcrqomrc");</script>
+
+	<!-- Your Chat Plugin code -->
+	<div class="fb-customerchat" attribution=setup_tool page_id="100365821891587" theme_color="#0A7CFF"
+		logged_in_greeting="Tasty Cakes xin chào bạn !" logged_out_greeting="Tasty Cakes xin chào bạn !">
+	</div>
+	<!-- End back to top & chat-->
+	<div class="container-fluid full" style="background-color: #F7F8FC;">
+		<!--Navigation-->
+		<div class="w3-top ">
+			<div class="w3-bar w3-card w3-row head  py-3 px-4">
+				<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+					href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+						class="fa fa-bars"></i></a>
+				<div class="w3-bar-item w3-col w3-container pt-2 topnav w3-hide-small" style="width:40%">
+					<div class="w3-row">
+						<div class="w3-col w3-container" style="width:33%"><a class="nav-link js-scroll-trigger font a"
+								href="#">TRANG CHỦ</a></div>
+						<div class="w3-col w3-container element a" style="width:33%">
+							<div class="w3-dropdown-hover nav-link js-scroll-trigger font">
+								<button class="w3-button b js-scroll-trigger" onclick="window.location.href='#Menu'"
+									id="w3">MENU</button>
+								<div class="w3-dropdown-content fixe">
+									<ul class="cent py-3">
+										<li class="pb-3"><a href="#" class="w3-bar-item w3-button">Bánh Kem</a></li>
+										<li class="py-3"><a href="#" class="w3-bar-item w3-button">Bánh Quy</a></li>
+										<li class="py-3"><a href="#" class="w3-bar-item w3-button">Bánh Mì</a></li>
+										<li class="py-3"><a href="#" class="w3-bar-item w3-button">Bánh Nướng nhỏ</a>
+										</li>
+										<li class="py-3"><a href="#" class="w3-bar-item w3-button">Bánh Bao</a></li>
+										<li class="py-3"><a href="#" class="w3-bar-item w3-button">Bánh Ổ Dài</a></li>
+										<li class="py-3"><a href="#" class="w3-bar-item w3-button">Bánh Donut</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="w3-col w3-container  element a" style="width:33%">
+							<div class="w3-dropdown-hover nav-link js-scroll-trigger font">
+								<button class="w3-button b js-scroll-trigger" onclick="window.location.href='#BanhMoi'"
+									id="w3">BÁNH MỚI</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="w3-col w3-container screen" style="width:20%">
+					<a href="#" style="display: flex;justify-content: center;"><img class=" brand mr-8"
+							src="img/coverPS.png"></a>
+				</div>
+				<div class="w3-bar-item w3-col w3-container w3-hide-small pt-2" style="width:40%">
+					<div class="w3-row">
+						<div class="w3-col w3-container" style="width:40%"><a class="nav-link js-scroll-trigger font a"
+								href="#DaoTao">ĐÀO TẠO</a></div>
+						<div class="w3-col w3-container" style="width:40%"><a class="nav-link js-scroll-trigger font a"
+								href="#About">VỀ CHÚNG TÔI</a></div>
+						<div class="w3-col w3-container" style="width:20%"><a class="nav-link js-scroll-trigger font a"
+								href="#HoTro">HỖ TRỢ</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- hide -->
+		<div id="navDemo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium wid w3-top w3-right"
+			style="z-index: 50;">
+			<a href="#" class="w3-bar-item w3-button w3-right padding js-scroll-trigger" onclick="myFunction()">TRANG
+				CHỦ</a>
+			<a href="#Menu" class="w3-bar-item w3-button w3-right padding js-scroll-trigger"
+				onclick="myFunction()">MENU</a>
+			<a href="#BanhMoi" class="w3-bar-item w3-button w3-right padding js-scroll-trigger"
+				onclick="myFunction()">BÁNH MỚI</a>
+			<a href="#DaoTao" class="w3-bar-item w3-button w3-right padding js-scroll-trigger" onclick="myFunction()">ƯA
+				CHUỘNG</a>
+			<a href="#About" class="w3-bar-item w3-button w3-right padding js-scroll-trigger" onclick="myFunction()">VỀ
+				CHÚNG TÔI</a>
+			<a href="#Hotro" class="w3-bar-item w3-button w3-right padding js-scroll-trigger" onclick="myFunction()">HỖ
+				TRỢ</a>
+		</div>
+		<!-- User cuon theo trang -->
+		<div class="user">
+			<ul class="ul_user">
+				<li class="active cart" id="button">
+					<a href="#" data-toggle="collapse" data-target="#demo">
+						<i class="fas fa-search" style=aria-hidden="true"></i>
+					</a>
+					<ul>
+						<li>
+							<div id="demo" class="collapse">
+								<div class="box">
+									<div class="container-4">
+										<form autocomplete="off" target="_self" action="/muongimuon.php">
+											<div class="autocomplete">
+												<input onfocus="this.value=''" type="text" id="search" name="myCountry"
+													placeholder="Search..." />
+												<button class="icon" target="_self">
+													<i class="fa fa-search"></i>
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li><a href="#home"><i class="fas fa-shopping-cart"></i></a></li>
+				<li><a href="#home"><i class="fas fa-heart"></i></i></a></li>
+				<li><a href="#home" onclick="document.getElementById('id01').style.display='block'"
+						style="width:auto;"><i class="fas fa-user-circle"></i></a></li>
+			</ul>
+			<div id="id01" class="modal">
+				<div class="container tal" id="container">
+					<div class="form-container sign-up-container up">
+						<span onclick="document.getElementById('id01').style.display='none'" class="close pr-2"
+							style="font-family: 'Caveat', cursive; cursor:pointer; font-size: 200%;"
+							title="Close Modal">&times;</span>
+						<form action="#">
+							<h2>Tạo tài khoản</h2>
+							<div class="social-container">
+								<a href="#" class="social fb"><i class="fab fa-facebook-f"></i></a>
+								<a href="#" class="social gg"><i class="fab fa-google-plus-g"></i></a>
+								<a href="#" class="social in"><i class="fab fa-linkedin-in"></i></a>
+							</div>
+							<span>hoặc sử dụng email của bạn</span>
+							<input onfocus="this.value=''" type="text" placeholder="Tên" />
+							<input onfocus="this.value=''" type="email" placeholder="Email" />
+							<input onfocus="this.value=''" type="password" placeholder="Mật khẩu" />
+							<button class="buton">Đăng ký</button>
+						</form>
+					</div>
+					<div class="form-container sign-in-container up">
+						<span onclick="document.getElementById('id01').style.display='none'" class="close pr-2"
+							style="font-family: 'Caveat', cursive; cursor:pointer; font-size: 200%;"
+							title="Close Modal">&times;</span>
+						<form action="#">
+							<h2 class="py-2">Đăng nhập</h2>
+							<div class="social-container">
+								<a href="#" class="social fb"><i class="fab fa-facebook-f"></i></a>
+								<a href="#" class="social gg"><i class="fab fa-google-plus-g"></i></a>
+								<a href="#" class="social in"><i class="fab fa-linkedin-in"></i></a>
+							</div>
+							<span class="or">hoặc dùng tài khoản của bạn</span>
+							<input type="email" placeholder="Email" />
+							<input onfocus="this.value=''" type="password" placeholder="Mật khẩu" />
+							<a class="or" href="#">Quên mật khẩu?</a>
+							<button class="buton">Đăng nhập</button>
+						</form>
+					</div>
+					<div class="overlay-container">
+						<div class="overlay">
+							<div class="overlay-panel overlay-left">
+								<h2 class="py-2">Mừng trở lại!</h2>
+								<p>Đăng nhập để Tasty Cakes có thể quan tâm bạn hơn nữa</p>
+								<button class="ghost buton" id="signIn">Đăng nhập</button>
+							</div>
+							<div class="overlay-panel overlay-right">
+								<h2>Chào bạn !</h2>
+								<p>Nhập thông tin cá nhân và bắt đầu với Tasty Cakes</p>
+								<button class="ghost buton" id="signUp">Đăng ký</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid full" style="padding-bottom: 1px;">
+			<!-- slide -->
+			 <!-- <div id="myCarousel" class="carousel slide row" data-ride="carousel">
+				<div class="carousel-inner slide">
+					<div class=" carousel-item show-slide  active">
+						<img src="img/head2.jpg">
+						<div class="carousel-caption">
+							<div class="contrast pb-5">
+								<p> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
+							</div>
+							<div class="thim-click-to-bottom pt-5">
+								<a href="#Menu" class="scroll js-scroll-trigger">
+									<i class="fa  fa-chevron-down"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class=" carousel-item show-slide">
+						<img src="img/head2.jpg" alt="Chicago">
+						<div class="carousel-caption">
+							<div class="contrast pb-5">
+								<p> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
+
+							</div>
+							<div class="thim-click-to-bottom pt-5">
+								<a href="#Menu" class="scroll js-scroll-trigger">
+									<i class="fa  fa-chevron-down"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item show-slide ">
+						<img src="img/head5.jpg" alt="New York">
+						<div class="carousel-caption">
+							<div class="contrast pb-5">
+								<p> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
+							</div>
+							<div class="thim-click-to-bottom pt-5">
+								<a href="#Menu" class="scroll js-scroll-trigger">
+									<i class="fa  fa-chevron-down"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+						<i class="fa fa-chevron-left" aria-hidden="true"></i>
+					</a>
+					<a class="carousel-control-next" href="#myCarousel" data-slide="next">
+						<i class="fa fa-chevron-right" aria-hidden="true"></i>
+					</a>
+				</div>
+			</div> -->
+			<!-- end slide -->
+
+			<!-- cam ket -->
+			<!-- <div class="dambao row my-5">
+				<div class="camket col-4 col-md-4 col-sm-4 col-lg-4 col-xl-4">
+					<h4 class="px-3 pt-4 text-center">Tasty Cakes cam kết</h4>
+				</div>
+				<div class=" muccamket col-4 col-md-4 col-sm-4 col-lg-4 col-xl-4"
+					style="border-right: 2px dotted #66d9ff;">
+					<ul>
+						<li class="pr-2"><img src="img/returnmoney.png" alt="Hoàn tiền nếu sản phẩm không đúng mô tả">
+						</li>
+						<li>
+							<p>Hoàn lại 100% tiền nếu sản phẩm không đúng mô tả</p>
+						</li>
+					</ul>
+				</div>
+				<div class="muccamket col-4 col-md-4 col-sm-4 col-lg-4 col-xl-4">
+					<ul>
+						<li class="pr-2"><img src="img/freeshi.png" alt=""></li>
+						<li>
+							<p>Freeship Đà Nẵng nếu đơn hàng trên 500k</p>
+						</li>
+					</ul>
+				</div>
+			</div> -->
+			<!-- End cam ket -->
+		</div>
+		<!--product-->
+		<div class="bbb_viewed">
+			<div class="contentProducts__heading" style="border-bottom:3px solid #3399ff;">
+				<h3 id="Menu" class="contentProducts__title anime">MENU</h3>
+			</div>
+			<!-- 1 -->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col">
+						<div class="bbb_main_container">
+							<div class="bbb_viewed_title_container">
+								<h3 class="bbb_viewed_title">BÁNH ...</h3>
+								<div class="bbb_viewed_nav_container">
+									<div class="bbb_viewed_nav bbb_viewed_prev"><i class="fas fa-chevron-left"></i>
+									</div>
+									<div class="bbb_viewed_nav bbb_viewed_next"><i class="fas fa-chevron-right"></i>
+									</div>
+								</div>
+							</div>
+							<div class="bbb_viewed_slider_container">
+								<div class="owl-carousel owl-theme bbb_viewed_slider owl-loaded owl-drag">
+									<div class="owl-stage-outer">
+										<div class="owl-stage"
+											style="transform: translate3d(-1813px, 0px, 0px); transition: all 0s ease 0s; width: 3108px;">
+											<!-- lặp bánh ... -->
+											<div class="owl-item cloned sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">3<sup>đ</sup></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..er</a></div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<!-- lặp bánh ... -->
+										</div>
+									</div>
+									<div class="owl-nav disabled">
+										<div class="owl-prev">prev</div>
+										<div class="owl-next">next</div>
+									</div>
+									<div class="owl-dots disabled"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 2 -->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col">
+						<div class="bbb_main_container">
+							<div class="bbb_viewed_title_container">
+								<h3 class="bbb_viewed_title">BÁNH ...</h3>
+								<div class="bbb_viewed_nav_container">
+									<div class="bbb_viewed_nav aaa_viewed_prev"><i class="fas fa-chevron-left"></i>
+									</div>
+									<div class="bbb_viewed_nav aaa_viewed_next"><i class="fas fa-chevron-right"></i>
+									</div>
+								</div>
+							</div>
+							<div class="bbb_viewed_slider_container">
+								<div class="owl-carousel owl-theme aaa_viewed_slider owl-loaded owl-drag">
+									<div class="owl-stage-outer">
+										<div class="owl-stage"
+											style="transform: translate3d(-1813px, 0px, 0px); transition: all 0s ease 0s; width: 3108px;">
+											<div class="owl-item cloned sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">3<sup>đ</sup></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..er</a></div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item cloned sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">
+																225<sup>đ</sup><span>300<sup>đ</sup></span></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..</a></div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item cloned sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">13275,<sup>đ</sup></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..Mobile</a>
+															</div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">
+																12225<sup>đ</sup><span>13300<sup>đ</sup></span></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..one</a></div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">30079<sup>đ</sup></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..D</a></div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">22250<sup>đ</sup></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..bile</a>
+															</div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">3<sup>đ</sup></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..er</a></div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item active sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">
+																225<sup>đ</sup><span>300<sup>đ</sup></span></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..</a></div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item active sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">13275,<sup>đ</sup></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..Mobile</a>
+															</div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item cloned sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">
+																12225<sup>đ</sup><span>13300<sup>đ</sup></span></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..one</a></div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item cloned sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">30079<sup>đ</sup></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..D</a></div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item cloned sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">22250<sup>đ</sup></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..bile</a>
+															</div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="owl-nav disabled">
+										<div class="owl-prev">prev</div>
+										<div class="owl-next">next</div>
+									</div>
+									<div class="owl-dots disabled"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 3 -->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col">
+						<div class="bbb_main_container">
+							<div class="bbb_viewed_title_container">
+								<h3 class="bbb_viewed_title">BÁNH ...</h3>
+								<div class="bbb_viewed_nav_container">
+									<div class="bbb_viewed_nav ccc_viewed_prev"><i class="fas fa-chevron-left"></i>
+									</div>
+									<div class="bbb_viewed_nav ccc_viewed_next"><i class="fas fa-chevron-right"></i>
+									</div>
+								</div>
+							</div>
+							<div class="bbb_viewed_slider_container">
+								<div class="owl-carousel owl-theme ccc_viewed_slider owl-loaded owl-drag">
+									<div class="owl-stage-outer">
+										<div class="owl-stage"
+											style="transform: translate3d(-1813px, 0px, 0px); transition: all 0s ease 0s; width: 3108px;">
+											<div class="owl-item cloned sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">3<sup>đ</sup></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..er</a></div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item cloned sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">
+																225<sup>đ</sup><span>300<sup>đ</sup></span></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..</a></div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item cloned sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">13275,<sup>đ</sup></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..Mobile</a>
+															</div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">
+																12225<sup>đ</sup><span>13300<sup>đ</sup></span></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..one</a></div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">30079<sup>đ</sup></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..D</a></div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">22250<sup>đ</sup></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..bile</a>
+															</div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">3<sup>đ</sup></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..er</a></div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item active sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">
+																225<sup>đ</sup><span>300<sup>đ</sup></span></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..</a></div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item active sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">13275,<sup>đ</sup></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..Mobile</a>
+															</div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item cloned sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">
+																12225<sup>đ</sup><span>13300<sup>đ</sup></span></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..one</a></div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item cloned sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">30079<sup>đ</sup></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..D</a></div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="owl-item cloned sp">
+												<div class="owl-item">
+													<div
+														class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+														<div class="bbb_viewed_image"><img src="img/cake.png" alt="">
+														</div>
+														<div class="bbb_viewed_content text-center">
+															<div class="bbb_viewed_price">22250<sup>đ</sup></div>
+															<div class="bbb_viewed_name"><a href="#">Bánh..bile</a>
+															</div>
+														</div>
+														<ul class="item_marks">
+															<li class="item_mark item_discount">-25%</li>
+															<li class="item_mark item_new">new</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="owl-nav disabled">
+										<div class="owl-prev">prev</div>
+										<div class="owl-next">next</div>
+									</div>
+									<div class="owl-dots disabled"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Bánh mới -->
+		<div>
+			<section class="contentProducts"></section>
+		</div>
+	</div>
+
+
+
+	</div>
+	<!-- Core theme JS-->
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

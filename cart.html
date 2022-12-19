@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>Giỏ hàng - Tasty Cakes</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.0/css/all.css">
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+  	<link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/mdb.min.css">
+  	<link rel="stylesheet" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-addons-4.19.1.min.css">
+  	<link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/mdb-plugins-gathered.min.css">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="img/cakes.png" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i|Noto+Sans:400,400i,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+	<!-- w3 -->
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    
+    <!-- slide product -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/assets/owl.theme.default.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/owl.carousel.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/owl.carousel.min.js"></script>
+	<style type="text/css" media="screen">
+	/* background top*/
+	body{
+		font-family: 'Dancing Script', cursive !important;
+	}
+	#myBtn{
+			display: none !important;
+		}
+	.link{
+		background-image: url('img/head2.jpg');
+		min-height: 255px; background-size: cover;
+		background-position: bottom;
+		background-attachment: fixed;
+	}
+	.breadcrumb {
+		background: transparent;
+		display: block;
+		font-size: 14px;
+		line-height: 25px;
+		padding: 0 0 0 10px;
+		text-transform: capitalize;
+		overflow: hidden;
+		list-style-type: none;
+	}
+	/*content background*/
+	.breadcrumb li, h2{
+		display: inline-block;
+	}
+	.breadcrumb > li + li a:before {
+	    content: "/";
+	    display: inline-block;
+	    margin-left: 11px;
+	    margin-right: 10px;
+	}
+	.carou{
+		padding-top:10%;
+		text-align: center;	
+	}
+	.carou h1 {
+		color:#e6e6e6;
+	}
+	.carou a{
+		color: #ccc;
+	}
+	.carou a:hover{
+		color: #fff;
+	}
+	.carou .active a {
+		color: #fff;
+	}
+	.de{
+		width: 100%;
+	}
+
+	/* Table cart */
+	
+	/* table, th, td {
+	  border: 1px solid black;
+	} */
+	.product table{
+		width: 100%;
+	}
+	.product{
+		margin: auto;
+	}
+	.product th{
+		text-transform: uppercase;
+		font-weight: 600;
+		color: #777;
+	}
+	.product td{
+		padding-top: 15px;
+    	padding-bottom: 15px;
+	}
+	.product td ul{
+		margin-bottom: 0px;
+	}
+	.product tbody .bottum{
+		border-bottom: 1px solid #cccc;
+	}
+	.product tbody .margin-left-auto{
+		margin-left: auto;
+	}
+	
+	._{
+		border-bottom: 2px solid #33ccff;
+	}
+	.mrs{
+		border-left: 2px dotted #b3d9ff !important
+	}
+	.remove{
+		display: block;
+	    width: 24px;
+	    height: 24px;
+	    font-size: 15px !important;
+	    line-height: 19px !important;
+	    border-radius: 100%;
+	    color: #ccc;
+	    font-weight: bold;
+	    text-align: center;
+	    border: 2px solid currentColor;
+	}
+	td .remove:hover{
+		color: #000;
+	}
+	.product-thumbnail{
+		text-align: center;
+	}
+	.buttons_added {
+	    opacity:1;
+	    display:inline-block;
+	    display:-ms-inline-flexbox;
+	    display:inline-flex;
+	    white-space:nowrap;
+	    vertical-align:top;
+	}
+	.is-form {
+	    overflow:hidden;
+	    position:relative;
+	    background-color:#f9f9f9;
+	    height:2.2rem;
+	    width:1.9rem;
+	    padding:0;
+	    text-shadow:1px 1px 1px #fff;
+	    border:1px solid #ddd;
+	}
+	.is-form:focus,.input-text:focus {
+	    outline:none;
+	}
+	.is-form.minus {
+	    border-radius:4px 0 0 4px;
+	}
+	.is-form.plus {
+	    border-radius:0 4px 4px 0;
+	}
+	.input-qty {
+	    background-color:#fff;
+	    height:2.2rem;
+	    text-align:center;
+	    display:inline-block;
+	    vertical-align:top;
+	    margin:0;
+	    border-top:1px solid #ddd;
+	    border-bottom:1px solid #ddd;
+	    border-left:0;
+	    border-right:0;
+	    padding:0;
+	}
+	.input-qty::-webkit-outer-spin-button,.input-qty::-webkit-inner-spin-button {
+	    -webkit-appearance:none;
+	    margin:0;
+	}
+	footer{
+		font-family:'Texturina', seri !important;
+	}
+	.text-end{
+		text-align: end;
+	}
+	.continue{
+	    text-transform: uppercase;
+	    letter-spacing: .03em;
+	    text-align: center;
+	    text-decoration: none;
+	    border: 3px solid #33ccff;
+	    line-height: 2.4em;
+	    min-height: 2.5em;
+	    padding: 0 1.2em;
+	    max-width: 100%;
+	}
+	.thanhtoan{
+		font-weight: bold;
+	    font-size: .97em;
+	    color: #fff;
+	    letter-spacing: .03em;
+	    background: linear-gradient(to right, #0088cc, #4dc3ff);
+	}
+	.thanhtoan:hover{
+		color: #fff7e6;
+		background: linear-gradient(to right, #4dc3ff, #0088cc);
+	}
+	.width-7{
+		width: 70%;
+	}
+	.width-1{
+		width: 10%;
+	}
+	@media screen and (max-width: 450px){
+		.de{
+			padding-left: 0px !important;
+			margin-left: 0px !important;
+		}
+		.nole{
+			display: none;
+		}
+		.product, .content{
+			padding: 0px;
+		}
+		.product td{
+			font-size: 10px;
+		}
+		.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+		     padding-right: 0px !important; 
+		     padding-left: 0px !important; 
+		}
+	}
+	@media screen and (max-width: 1200px) {
+		.nopadding{
+			padding-left: 0px !important;
+			padding-right: 0px !important;
+		}
+	}
+
+
+	/* them */
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.closse {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.closse:hover,
+.closse:focus {
+  color: black;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+.map{
+  margin: auto;
+  width: 100%;
+}
+.chot{
+  padding: 0px;
+}
+.addres input{
+  width: 100%;
+  border: none !important;
+  font-size: 13px;
+  padding-left: 3%;
+}
+.addres{
+    padding: 2%1%2%2%;
+    display: flex;
+    
+}
+.say{
+	font-size: 14px;
+    font-weight: 400;
+}
+.bor{
+  border: 1px solid    #999999;
+  margin: 0% 5% 5% 5%;
+  
+}
+.mrs{
+    border-left: 2px dotted #b3d9ff !important
+  }
+input:focus {
+  border: none;
+  outline: 0;  
+  outline-style: none;  
+  outline-width: 0; 
+}
+.mar{
+  font-size: 20px;
+  color: #808080;
+}
+.size{
+  width: 25px;
+}
+.gren{
+  color: green;
+}
+
+.thanhtoan {
+  font-weight: bold;
+  font-size: .97em;
+  color: #fff;
+  letter-spacing: .03em;
+  background: linear-gradient(to right, #0088cc, #4dc3ff);
+}
+.dk{
+  width: 65%;
+  text-align: center;
+  margin: auto
+}
+a:hover{
+ text-decoration: none;
+ }
+ 
+	</style>
+</head>
+<body oncontextmenu="return false" class="snippet-body">
+	<!-- Back to top & chat -->
+	<button onclick="topFunction()" style="display: none;" id="myBtn" title="Go to top"><img src="images/top.png"  alt=""></button>
+	<!-- Load Facebook SDK for JavaScript -->
+	<div class="container-fluid full" style="background-color: #F7F8FC;">
+		<!--Navigation-->
+		<div class="w3-top ">
+			<div class="w3-bar w3-card w3-row head  py-3 px-4">
+				<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+				  <div class="w3-bar-item w3-col w3-container pt-2 topnav w3-hide-small"style="width:40%">
+				  	<div class="w3-row">
+					  <div class="w3-col w3-container" style="width:33%"><a class="nav-link js-scroll-trigger font a" href="#" >TRANG CHỦ</a></div>
+					  <div class="w3-col w3-container element a" style="width:33%">
+					  	<div class="w3-dropdown-hover nav-link js-scroll-trigger font">
+	                        <button class="w3-button b js-scroll-trigger" onclick="window.location.href='#Menu'" id="w3">MENU</button>
+	                        <div class="w3-dropdown-content fixe">
+	                            <ul class="cent py-3">
+	                                <li class="pb-3"><a href="#" class="w3-bar-item w3-button">Bánh Kem</a></li>
+	                                <li class="py-3"><a href="#" class="w3-bar-item w3-button">Bánh Quy</a></li>
+	                                <li class="py-3"><a href="#" class="w3-bar-item w3-button">Bánh Mì</a></li>
+	                                <li class="py-3"><a href="#" class="w3-bar-item w3-button">Bánh Nướng nhỏ</a></li>
+	                                <li class="py-3"><a href="#" class="w3-bar-item w3-button">Bánh Bao</a></li>
+	                                <li class="py-3"><a href="#" class="w3-bar-item w3-button">Bánh Ổ Dài</a></li>
+	                                <li class="py-3"><a href="#" class="w3-bar-item w3-button">Bánh Donut</a></li>
+	                            </ul>
+	                      </div>
+	                    </div>
+					  </div>
+					  <div class="w3-col w3-container  element a" style="width:33%">
+					  	<div class="w3-dropdown-hover nav-link js-scroll-trigger font">
+					  		<button class="w3-button b js-scroll-trigger" onclick="window.location.href='#BanhMoi'" id="w3">BÁNH MỚI</button>
+	                    </div>
+					  </div>
+					</div>
+				  </div>
+				  <div class="w3-col w3-container screen" style="width:20%">
+				  		<a href="#" style="display: flex;justify-content: center;"><img class=" brand mr-8" src="img/coverPS.png"></a>
+				  </div>
+				  <div class="w3-bar-item w3-col w3-container w3-hide-small pt-2" style="width:40%">
+				  	<div class="w3-row">
+					  <div class="w3-col w3-container" style="width:40%"><a class="nav-link js-scroll-trigger font a" href="#DaoTao">ĐÀO TẠO</a></div>
+					  <div class="w3-col w3-container" style="width:40%"><a class="nav-link js-scroll-trigger font a" href="#About">VỀ CHÚNG TÔI</a></div>
+					  <div class="w3-col w3-container" style="width:20%"><a class="nav-link js-scroll-trigger font a" href="#HoTro">HỖ TRỢ</a></div>
+					</div>
+				  </div>
+			</div>
+		</div>
+		<!-- hide -->
+		<div id="navDemo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium wid w3-top w3-right" style="z-index: 50;">
+		  	<a href="#" class="w3-bar-item w3-button w3-right padding js-scroll-trigger" onclick="myFunction()">TRANG CHỦ</a>
+		  	<a href="#Menu" class="w3-bar-item w3-button w3-right padding js-scroll-trigger" onclick="myFunction()">MENU</a>
+		  	<a href="#BanhMoi" class="w3-bar-item w3-button w3-right padding js-scroll-trigger" onclick="myFunction()">BÁNH MỚI</a>
+		  	<a href="#DaoTao" class="w3-bar-item w3-button w3-right padding js-scroll-trigger" onclick="myFunction()">ƯA CHUỘNG</a>
+		  	<a href="#About" class="w3-bar-item w3-button w3-right padding js-scroll-trigger" onclick="myFunction()">VỀ CHÚNG TÔI</a>
+		  	<a href="#Hotro" class="w3-bar-item w3-button w3-right padding js-scroll-trigger" onclick="myFunction()">HỖ TRỢ</a>
+		</div>
+		<!-- User cuon theo trang -->
+        <div class="user">
+            <ul class="ul_user">
+		  	  	<li class="active cart"id="button"><a href="#"data-toggle="collapse" data-target="#demo"><i class="fas fa-search" style= aria-hidden="true"></i></a>
+		  	  		<ul>
+		  	  			<li>
+							<div id="demo" class="collapse">
+								<div class="box">
+									 <div class="container-4">
+									  	<form autocomplete="off" target="_self" action="/muongimuon.php">
+									  		<div class="autocomplete">
+											    <input onfocus="this.value=''" type="text" id="search" name="myCountry" placeholder="Search..." />
+											    <button class="icon" target="_self">
+											    	<i class="fa fa-search"></i>
+											    </button>
+											 </div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</li>
+		  	  		</ul>
+		  	  	</li>
+                <li><a href="#home"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="#home"><i class="fas fa-heart"></i></i></a></li>
+                <li><a href="#home"  onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fas fa-user-circle"></i></a></li>
+            </ul>
+            <div id="id01" class="modal">
+			    <div class="container tal" id="container">
+			        <div class="form-container sign-up-container up">
+			        	<span onclick="document.getElementById('id01').style.display='none'" class="close pr-2" style="font-family: 'Caveat', cursive; cursor:pointer; font-size: 200%;" title="close modal">&times;</span>
+			            <form action="#">
+			                <h2>Tạo tài khoản</h2>
+			                <div class="social-container">
+			                    <a href="#" class="social fb"><i class="fab fa-facebook-f"></i></a>
+			                    <a href="#" class="social gg"><i class="fab fa-google-plus-g"></i></a>
+			                    <a href="#" class="social in"><i class="fab fa-linkedin-in"></i></a>
+			                </div>
+			                <span>hoặc sử dụng email của bạn</span>
+			                <input onfocus="this.value=''" type="text" placeholder="Tên" />
+			                <input onfocus="this.value=''" type="email" placeholder="Email" />
+			                <input onfocus="this.value=''" type="password" placeholder="Mật khẩu" />
+			                <button class="buton">Đăng ký</button>
+			            </form>
+			        </div>
+			        <div class="form-container sign-in-container up">
+			        	<span onclick="document.getElementById('id01').style.display='none'" class="close pr-2" style="font-family: 'Caveat', cursive; cursor:pointer; font-size: 200%;" title="close modal">&times;</span>
+			            <form action="#">
+			                <h2 class="py-2">Đăng nhập</h2>
+			                <div class="social-container">
+			                    <a href="#" class="social fb"><i class="fab fa-facebook-f"></i></a>
+			                    <a href="#" class="social gg"><i class="fab fa-google-plus-g"></i></a>
+			                    <a href="#" class="social in"><i class="fab fa-linkedin-in"></i></a>
+			                </div>
+			                <span class="or">hoặc dùng tài khoản của bạn</span>
+			                <input type="email" placeholder="Email" />
+			                <input onfocus="this.value=''" type="password" placeholder="Mật khẩu" />
+			                <a class="or" href="#">Quên mật khẩu?</a>
+			                <button class="buton">Đăng nhập</button>
+			            </form>
+			        </div>
+			        <div class="overlay-container">
+			            <div class="overlay">
+			                <div class="overlay-panel overlay-left">
+			                    <h2 class="py-2">Mừng trở lại!</h2>
+			                    <p>Đăng nhập để Tasty Cakes có thể quan tâm bạn hơn nữa</p>
+			                    <button class="ghost buton" id="signIn">Đăng nhập</button>
+			                </div>
+			                <div class="overlay-panel overlay-right">
+			                    <h2>Chào bạn !</h2>
+			                    <p>Nhập thông tin cá nhân và bắt đầu với Tasty Cakes</p>
+			                    <button class="ghost buton" id="signUp">Đăng ký</button>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+        </div>
+
+		<div class="container-fluid full link">
+			<!-- banner&links -->
+  			<div  class="carou">
+  				<h1>Giỏ Hàng</h1>
+			    <ul class="breadcrumb text-center">
+			    	<li><a href="#">Trang chủ</a></li>
+			    	<li class="active"><a href="#">Giỏ hàng</a></li>
+			    </ul>
+			</div>
+			<!-- banner&links -->
+		</div>
+
+	    <!-- Bánh mới -->
+		<div style="display: none;">
+			<section class="contentProducts"></section>
+		</div>
+					<!-- Content -->
+		<div class="container-fluid content pb-5">
+			<h4 class="float-left de pl-5 py-3 ml-5">GIỎ HÀNG CỦA BẠN:</h4>
+			<div class="cart-container row container page-wrapper page-checkout product">
+				<div  class="col-12 col-sm-12 col-md-12 col-xl-8 col-lg-12">
+					<table>
+					  	<thead>
+						    <tr class="_">
+						      <th class=" py-1 product-name width-7" colspan="4">Sản phẩm</th>
+						      <th class=" py-1 width-1">Số Lượng</th>
+						      <th class=" py-1 text-center width-1">Giá</th>
+						      <th class=" py-1 text-center width-1 nole">Tổng</th>
+						    </tr>
+					  	</thead>
+					  	<tbody>
+						    <tr class="bottum">
+						      <td colspan="2"><a href="#" class="remove" title="Xóa sản phẩm này">×</a></td>
+						      <td class="product-thumbnail">
+									<a href="#">
+										<img width="100" height="100" src="https://lavitabakery.com/wp-content/uploads/2020/07/choco-multiseed-oatmeal-cookies-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" sizes="(max-width: 100px) 100vw, 100px">
+									</a>
+								</td>
+						      <td class="product-name" data-title="Sản phẩm">
+								<a href="https://lavitabakery.com/san-pham/multiseed-oatmeal-cookies-pack-8/?attribute_huong-vi=Chocolate">Multiseed Oatmeal Cookies (Pack 8)</a>
+								</td>
+								<td>
+									<div class="buttons_added">
+										 <input class="minus is-form" type="button" value="-">
+										 <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number" value="1">
+										 <input class="plus is-form" type="button" value="+">
+									</div>
+								</td>
+						      <td class="pl-2">800.000đ</td>
+						      <td class="text-end nole">800.000đ</td>
+						    </tr>
+
+						    <tr class="bottum">
+						      <td colspan="2"><a href="#" class="remove" title="Xóa sản phẩm này">×</a></td>
+						      <td class="product-thumbnail">
+									<a href="#">
+										<img width="100" height="100" src="https://lavitabakery.com/wp-content/uploads/2020/07/choco-multiseed-oatmeal-cookies-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" sizes="(max-width: 100px) 100vw, 100px">
+									</a>
+								</td>
+						      <td class="product-name" data-title="Sản phẩm">
+								<a href="#">Multiseed Oatmeal Cookies (Pack 8)</a>
+								</td>
+								<td>
+									<div class="buttons_added">
+										 <input class="minus is-form" type="button" value="-">
+										 <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number" value="1">
+										 <input class="plus is-form" type="button" value="+">
+									</div>
+								</td>
+						      <td class="pl-2">800.000đ</td>
+						      <td class="text-end nole">800.000đ</td>
+						    </tr>
+						    <tr>
+						    	<td colspan="6" class="actions clear py-5">
+						    		<div class="continue-shopping pull-left hide-for-small text-left mr-half">
+						    			<a class="continue py-2 font-weight-bold" href="#">← Tiếp tục mua sắm</a>
+						    			<div class="pl-5" style="display: inline-block;">
+						    				<a class=" continue py-2 px-4" href="#" title="Cập nhật"><i class="fas fa-sync-alt"></i></a>
+						    			</div>
+									</div>
+								</td>
+							</tr>
+					  	</tbody>
+					</table>
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-xl-4 col-lg-12 mrs">
+					<table>
+					  	<thead>
+						    <tr class="_">
+						      <th class="text-center py-1 product-name text-dark" colspan="2">TỔNG ĐƠN HÀNG</th>
+						    </tr>
+					  	</thead>
+					  	<tbody class="px-3">
+						    <tr>
+						      <td class="px-5 bottum" colspan="2">
+						      	<ul style="display: flex;">
+						      		<li class="font-weight-bold">Tạm Tính </li>
+						      		<li class="margin-left-auto"> 1.600.000đ</li>
+						      	</ul>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td class="px-5 bottum" colspan="2">
+						      	<ul style="display: flex;">
+						      		<li class="font-weight-bold">Phí vận chuyển </li>
+						      		<li class="margin-left-auto"> 10.000đ</li>
+						      	</ul>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td class="px-5 bottum" colspan="2">
+						      	<ul style="display: flex;">
+						      		<li class="font-weight-bold">Tổng </li>
+						      		<li class="margin-left-auto"> 1.610.000đ</li>
+						      	</ul>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td class="px-5 pt-5 text-center nopadding" colspan="2">
+						      	<a href="#" onclick="document.getElementById('id02').style.display='block'" style="width:auto;" class="thanhtoan px-3 py-3">TIẾN HÀNH THANH TOÁN</a>
+						    </tr>
+					  	</tbody>
+					</table>
+					<div id="id02" class="modal pt-5">
+							  <form class="modal-content animate" action="/action_page.php" method="post">
+							    <div class="imgcontainer">
+							      <span onclick="document.getElementById('id02').style.display='none'" class="closse" title="Close Modal">&times;</span>
+							      <h2 class="font-weight-bold">XÁC NHẬN ĐƠN HÀNG</h2>
+							      <hr style="width: 80%; margin: auto; color: #333333">
+							    </div>
+
+							    <div class="container chot">
+							     <div class="px-3">
+							        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.609467332547!2d108.24787391435535!3d15.981758146022408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142108ff0e96fcf%3A0xd9be3bf0a5fed5ba!2zMjggSHXhu7NuaCBWxINuIE5naOG7hywgSG_DoCBI4bqjaSwgTmfFqSBIw6BuaCBTxqFuLCDEkMOgIE7hurVuZyA1NTAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1608393393321!5m2!1svi!2s" width="400" height="300" class="map" style="display: block; margin:auto;" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+							     </div>
+							      <div class="row pt-3 pb-5">
+							        <div class="col-xl-6 col-md-6 col-lg-6 col-sm-6 col-6">
+							          <div class="addres"><h4>1. Xác nhận thông tin đơn hàng</h4></div>
+							          <div class="addres bor">
+							            <i class="mar fas fa-map-marker-alt "></i>
+							            <input id="searchLoction" placeholder="Nhập địa chỉ giao hàng" title="Nhập địa chỉ giao hàng" type="text" autocomplete="off" class="uk-input">
+							          </div>
+							           <div class="addres bor">
+							            <i class="mar fas fa-user-circle"></i>
+							            <input type="text" placeholder="Người nhận" title="Người nhận"  name="uname" required>
+							          </div>
+							          <div class="addres bor">
+							            <i class=" mar fas fa-phone"></i>
+							            <input type="tel" id="phone" name="phone" placeholder="Số điện thoại" title="Số điện thoại" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+							          </div>
+							          <div class="addres bor">
+							            <input type="text" placeholder="Ghi chú" title="Lưu ý của bạn" name="uname" >
+							          </div>
+							        </div>
+							        <div class="col-xl-6 col-md-6 col-lg-6 col-sm-6 col-6  mrs">
+							          <div class=""><h4>2. Hình thức thanh toán</h4></div>
+							          <div class="container pb-0 px-1">
+							            <div class="row say">
+							              <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 px-0">
+							              <div class="pt-2"><input  type="radio" id="thanhtoan" name="thanhtoan" checked> <i class="gren fas fa-money-bill-wave"></i> Thanh toán khi nhận hàng</div>
+							              <div class="pt-2"><input  type="radio" id="thanhtoan" name="thanhtoan"> <i class="fas fa-money-check-alt"></i> Thẻ ATM nội địa</div>
+							              <div class="pt-2"><input  type="radio" id="thanhtoan" name="thanhtoan"> <img class="size" src="images/zalo.png" alt="ZaloPay"> ZaloPay</div>
+							            </div>
+							            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 px-0">
+							              <div class="pt-2"><input  type="radio" id="thanhtoan" name="thanhtoan"> <img class="size" src="images/visa.png" alt="ZaloPay"> Visa/Master/JCB</div>
+							              <div class="pt-2"><input  type="radio" id="thanhtoan" name="thanhtoan"> <img class="size" src="images/momo.png" alt=""> MoMo</div>
+							            </div>
+							            </div>
+							          </div>
+							          <hr>
+							          <div class="text-center">
+							            <h3>Tổng: <small class="font-italic">6.100.000đ</small></h3>
+							            <hr>
+							            <div class="dk pb-4">
+							            <small>Bằng việc chọn "Đặt hàng", bạn đã đồng ý với <a style="text-decoration:underline;" href="#">Điều khoản sử dụng</a>, và<a href="#" style="text-decoration:underline;"> chính sách bảo mật thông tin</a> của Tasty Cakes.</small>
+							          </div>
+							            <div class="px-5 pt-3 text-center nopadding">
+							              <a href="#" class="thanhtoan px-3 py-3">ĐẶT HÀNG</a>
+							            </div>
+							          </div>
+							        </div>
+							      </div>
+							    </div>
+							  </form>
+							</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+				
+	<!-- Footer -->
+<footer class="page-footer font-small pt-5" style="background-image: linear-gradient(to bottom, #e6f2ff,#b3d9ff, #80bfff);">
+  	<div class="container-fluid text-center text-md-left">
+  	</div>
+</footer>
+<footer class="page-footer font-small pt-4" style="background-color:#0066cc;">
+  	<div class="container-fluid text-center text-md-left">
+    	<div class="row" style="justify-content: center;">
+      		<div class="col-md-4 col-12 mt-md-0 mt-3">
+	        	<ul class="pt-4 border-right">
+	        		<li class="py-2"><img style="width: 45%;" src="img/coverPS.png" alt="Tasty Cakes"><span class="pl-2 delius"> Tasty Cakes, Sweet flavour !</span></li>
+					<li class="py-2 ">
+						<span><i class="marker fas fa-map-marker-alt mb-1"></i>
+						14 Đặng Dung, phường Tân Định, Quận 1, TP. HCM Công Ty Cổ Phần Tasty Cakes</span>
+					</li>
+					<li >
+						<span><i class="marker fas fa-mobile-alt"></i>1900 1508</span> <img  class="pl-5" style="width: 35%;" src="images/dathongbao.png">
+					</li>
+					<li class="py-2">
+						<span><i class="marker far fa-envelope"></i>infor@TastyCakes.vn</span>
+					</li>
+				</ul>
+      		</div>
+      		<div class=" col-sm-8 col-md-8 col-8 col-lg-8">
+				<div class="row">
+				<div class="f_cols f_col col-md-3 col-6 ">
+					<h5>THÔNG TIN</h5>
+					<ul class="ff">
+						<li><a  href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Giới Thiệu</a></li>
+						<li><a  href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Hệ Thống cửa hàng</a></li>
+						<li><a  href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Liên Hệ</a></li>
+						<li><a  href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Về Chúng Tôi</a></li>
+					</ul>	
+				</div>	
+				<div class="f_cols f_col col-md-3 col-6 ">
+					<h5>ĐIỂU KHOẢNG</h5>
+					<ul class="ff">
+						<li><a  href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Điều Khoảng Dịch Vụ</a></li>
+						<li><a  href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Cam Kết</a></li>
+						<li><a  href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Tiện Ích</a></li>
+						<li><a  href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Quyền Sở Hữu Trí Tuệ</a></li>
+
+					</ul>	
+				</div>	
+				<div class="f_cols f_col col-md-3 col-6 ">
+					<h5>CHÍNH SÁCH</h5>
+					<ul class="ff">
+						<li><a  href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Chính Sách Thanh Toán</a></li>
+						<li><a  href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Chính Sách Vận Chuyển</a></li>
+						<li><a  href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Chính Sách Bảo Mật</a></li>
+					</ul>
+				</div>
+				<div class="f_cols f_col col-md-3 col-6 pr-0">
+					<h5>HÌNH THỨC THANH TOÁN</h5>
+					<ul class="ff">
+						<li><img src="img/Thanhtoan.png"></li>
+						
+					</ul>
+				</div>
+				</div>
+				<div class="row">
+					<div class="col-8 offset-1 dary">Tải về trên di động &nbsp;
+						<a  href="#"> <img src="img/App_adroi.png"></a>
+						<a  href="#"><img src="img/App-ios.png"></a>
+					</div>
+				</div>	
+			</div>
+    	</div>
+  	</div>
+  	  <!-- Footer Elements -->
+  <div class="contain">
+
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a class="btn-floating btn-fb mx-1 waves-effect waves-light">
+          <i class="fab fa-facebook-f"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-tw mx-1 waves-effect waves-light">
+          <i class="fab fa-twitter"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-gplus mx-1 waves-effect waves-light">
+          <i class="fab fa-google-plus-g"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-li mx-1 waves-effect waves-light">
+          <i class="fab fa-linkedin-in"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-dribbble mx-1 waves-effect waves-light">
+          <i class="fab fa-dribbble"> </i>
+        </a>
+      </li>
+    </ul>
+    <!-- Social buttons -->
+
+  </div>
+  <!-- Footer Elements -->
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-1">© Bản quyền thuộc về công ty cổ phần Tasty Cakes -
+    <a href="#"> tastycakes.com.vn</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+		<!-- End footer -->
+			
+</div>
+<!-- Footer -->
+    <!-- Core theme JS-->
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
